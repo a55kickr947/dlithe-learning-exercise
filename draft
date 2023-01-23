@@ -99,3 +99,37 @@ void main()
     
     
 }
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+     int size,i;
+     scanf("%d",&size);
+     char name[size][20];
+     int rollno[size][20];
+     int marks[size][3];
+     for( i=0;i<size;i++)
+      {
+           scanf("%d %s %f %f %f",&roll[i],&name[i],&marks[i][0],&marks[i][1],&marks[i][2]);
+           
+      }
+      for(i=1;i<=62;i++)
+       printf("*");
+       
+      printf("\t\t\tMARKS LIST\n");
+      for(i=1;i<=62;i++)
+       printf("*");
+       printf("\nRoll No %-25s DSA CO ADE TOTAL AVG\n","student name");
+       for(i=1;i<=62;i++)
+       printf("*");
+       for(i=0;i<size;i++)
+       {
+            float total,average;
+            total=marks[i][0]+marks[i][1]+marks[i][2];
+            average=total/3;
+            printf("\n%6d %-25s %4.1f %4.1f %4.1f %5.1f %5.1f %7.1f",roll[i],name[i],marks[i][0],marks[i][1],marks[i][2]);
+            
+       }
+      
+     
+}
